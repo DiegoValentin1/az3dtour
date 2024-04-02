@@ -11,24 +11,6 @@ const Login = () => {
     const [failure, setFailure] = useState(false);
 
     const handleLogin = (credencialesValidas) => {
-        // Realizar verificación de las credenciales aquí
-        // Simulando un retraso de 2 segundos antes de mostrar el resultado
-        setTimeout(() => {
-            if (credencialesValidas) {
-                setSuccess(true);
-                setTimeout(() => {
-                    // Redirigir a otra parte
-                    navigation("/", { replace: true });
-                }, 2000);
-            } else {
-                setFailure(true);
-                setTimeout(() => {
-                    setExpanded(false);
-                    setFailure(false);
-                }, 2000);
-            }
-        }, 1000);
-
         setExpanded(true);
     };
     const navigation = useNavigate();

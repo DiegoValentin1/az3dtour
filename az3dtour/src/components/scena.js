@@ -47,7 +47,7 @@ export default function Scene() {
         <div ref={mountRef}>
             <Pannellum
                 width={'100%'}
-                height={'100vh'}
+                height={'80vh'}
                 title={scene.title}
                 image={scene.image}
                 pitch={scene.pitch}

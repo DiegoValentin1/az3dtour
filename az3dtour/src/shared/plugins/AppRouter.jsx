@@ -25,6 +25,7 @@ const AppRouter = () => {
                   <Routes>
                     <Route path="/" element={<UserHome/>}/>
                     <Route path="*" element={<E404/>} />
+                    <Route path="/tour" element={<TourScreen/>} />
                   </Routes>
                 </>
               ) : (

@@ -12,6 +12,20 @@ code {
     monospace;
 }
 
+::-webkit-scrollbar {
+  width: 12px; /* Ancho de la scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f3f4f6; /* Color de fondo de la track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6b7280; /* Color de la thumb */
+  border-radius: 9999px; /* Borde redondeado */
+  border: 3px solid #f3f4f6; /* Borde de la thumb */
+}
+
 
 @tailwind base;
 @tailwind components;

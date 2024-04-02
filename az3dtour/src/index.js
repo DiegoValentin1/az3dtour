@@ -6,7 +6,8 @@ import { ModelProvider } from './context/ModelContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <ModelProvider>    <App />
+  <ModelProvider>    
+    <App />
   </ModelProvider>
 );
 
