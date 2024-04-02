@@ -4,6 +4,7 @@ import Login from "../../modules/login/Login";
 import AuthContext from "../../modules/login/authContext";
 import E404 from "../E404";
 import UserHome from "../../modules/User/UserHome";
+import TourScreen from "../../modules/tour/TourScreen";
 
 const AppRouter = () => {
   var { user } = useContext(AuthContext);
@@ -40,6 +41,7 @@ const AppRouter = () => {
                   <Routes>
                     <Route path="auth" element={<Login/>} />
                     <Route index element={<>Main</>} />
+                    <Route path="/tour" element={<TourScreen/>} />
                     <Route path="*" element={<E404/>} />
                   </Routes>
               </>
