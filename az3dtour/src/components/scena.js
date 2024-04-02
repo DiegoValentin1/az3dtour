@@ -60,10 +60,10 @@ export default function Scene() {
                 haov={360}
                 vaov={100}
                 autoLoad
-                showControls={false}
                 showFullscreenCtrl={false}
                 draggable
-                showZoomCtrl={false}
+                keyBoardZoom={true}
+                showZoomCtrl={true}
                 orientationOnByDefault={false}
                 hotspotDebug={false}            >
                 {scene.hotSpots.map((spot, index) => (

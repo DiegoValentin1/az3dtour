@@ -1,6 +1,6 @@
 const Scenes = {
     insideOne: {
-        title: 'R&D',
+        title: 'HACKATHON 1',
         image: '../images/1-panoramica.jpeg',
         pitch: -11,
         yaw: 50,
@@ -30,8 +30,32 @@ const Scenes = {
         ]
     },
     insideTwo: {
-        title: 'R&D 2',
+        title: 'HACKATHON 2',
         image: "../images/2-panoramica.jpeg",
+        pitch: -11,
+        yaw: 50,
+        hotSpots: [
+            {
+                id: 'img',
+                type: 'custom',
+                pitch: -5,
+                yaw: -250,
+                action: 'changeScene',
+                targetScene: 'insideTree',
+            },
+
+            {
+                id: 'teamB',
+                type: 'info',
+                pitch: -5,
+                yaw: -300,
+                text: 'Team A, teamA@astrazeneca.com, AZ IT Team A Support',
+            }
+        ]
+    },
+    insideTree: {
+        title: 'HACKATHON 3',
+        image: "../images/3-panoramica.jpeg",
         pitch: -11,
         yaw: 50,
         hotSpots: [
