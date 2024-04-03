@@ -4,6 +4,7 @@ import { BellIcon } from '@heroicons/react/outline';
 import SearchBar from './SearchBar'
 import CheckBoxes from './CheckBoxes';
 import FlyoutMenu from './FlyoutMenu';
+import { Link } from 'react-router-dom';
 const Building = require('../../assets/buildingBlue.png')
 
 const user = {
@@ -226,7 +227,7 @@ export default function UserHome() {
                     <div className="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
                         <ul role="list" className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
                             {files.map((file) => (
-                                <li key={file.source} className="relative group">
+                                <Link to={'/tour'} key={file.source} className="relative group">
                                     <div className="block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden">
                                         <img src={file.source} alt="" className="object-cover pointer-events-none group-hover:opacity-75 group-hover:scale-125 transition-transform duration-300" />
                                         <button type="button" className="absolute inset-0 focus:outline-none">
@@ -235,7 +236,7 @@ export default function UserHome() {
                                     </div>
                                     <p className="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none">{file.title}</p>
                                     <p className="block text-sm font-medium text-gray-500 pointer-events-none">{file.size}</p>
-                                </li>
+                                </Link>
 
                             ))}
                         </ul>

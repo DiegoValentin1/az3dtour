@@ -5,6 +5,7 @@ import AuthContext from "../../modules/login/authContext";
 import E404 from "../E404";
 import UserHome from "../../modules/User/UserHome";
 import TourScreen from "../../modules/tour/TourScreen";
+import AreaScreen from "../../modules/Admin/Area/AreaScreen";
 
 const AppRouter = () => {
   var { user } = useContext(AuthContext);
@@ -26,6 +27,7 @@ const AppRouter = () => {
                     <Route path="/" element={<UserHome/>}/>
                     <Route path="*" element={<E404/>} />
                     <Route path="/tour" element={<TourScreen/>} />
+                    <Route path="/area" element={<AreaScreen/>} />
                   </Routes>
                 </>
               ) : (
@@ -45,6 +47,8 @@ const AppRouter = () => {
                     <Route index element={<>Main</>} />
                     <Route path="/tour" element={<TourScreen/>} />
                     <Route path="*" element={<E404/>} />
+                    <Route path="/area" element={<AreaScreen/>} />
+
                   </Routes>
               </>
             )
