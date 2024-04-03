@@ -23,7 +23,7 @@ public class User {
     @JsonIgnore
     private String password;
 
-    @DBRef(lazy = true)
+    @DBRef
     private Role role;
 
     private Boolean blocked;

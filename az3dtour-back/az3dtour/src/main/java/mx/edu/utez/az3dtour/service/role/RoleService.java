@@ -49,9 +49,8 @@ public class RoleService {
 
     @Transactional(readOnly = true)
     public ApiResponse<Role> findById(String id) {
-        Optional<Role> optionalRole = repository.findById(id);
-        if (optionalRole.isPresent()) {
-            Role role = optionalRole.get();
+        Role role = repository.findById(id).orElse(null);
+        if (role != null) {
             return new ApiResponse<>(
                     role, false, 200, "Rol encontrado"
             );
