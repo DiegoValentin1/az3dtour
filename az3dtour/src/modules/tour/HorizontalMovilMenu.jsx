@@ -3,6 +3,7 @@ import { Fragment, useState } from 'react'
 import { Dialog, Menu, Transition } from '@headlessui/react'
 import { XIcon } from '@heroicons/react/outline'
 import { DotsVerticalIcon } from '@heroicons/react/solid'
+import UserCards from './UserCards'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -62,26 +63,28 @@ export default function HorizontalMovilMenu({open, setOpen}) {
                         <div className=" sm:ml-6 sm:flex-1">
                           <div>
                             <div className="flex items-center">
-                              <h3 className="font-bold text-xl text-gray-900 sm:text-2xl">Ashley Porter</h3>
-                              <span className="ml-2.5 bg-green-400 flex-shrink-0 inline-block h-2 w-2 rounded-full">
+                              <h3 className="font-bold text-xl text-gray-900 sm:text-2xl">Genius Arena</h3>
+                              {/* <span className="ml-2.5 bg-green-400 flex-shrink-0 inline-block h-2 w-2 rounded-full">
                                 <span className="sr-only">Online</span>
-                              </span>
+                              </span> */}
                             </div>
-                            <p className="text-sm text-gray-500">@ashleyporter</p>
+                            <p className="text-sm text-gray-500">contacto@geniusarena.com</p>
                           </div>
                           <div className="mt-5 flex flex-wrap space-y-3 sm:space-y-0 sm:space-x-3">
-                            <button
+                            <a  
+                              href={`https://wa.me/${'7773518653'}?text=${encodeURIComponent("Hola, me gustaría saber más sobre Genius Arena")}`}
                               type="button"
                               className="flex-shrink-0 w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#881A59] hover:bg-[#881A59] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#881A59] sm:flex-1"
                             >
                               Message
-                            </button>
-                            <button
+                            </a>
+                            <a
+                              href={`tel:${'7773518653'}`}
                               type="button"
                               className="flex-1 w-full inline-flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#881A59]"
                             >
                               Call
-                            </button>
+                            </a>
                             <span className="ml-3 inline-flex sm:ml-0">
                               <Menu as="div" className="relative inline-block text-left">
                                 <Menu.Button className="inline-flex items-center p-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-400 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#881A59]">
@@ -137,7 +140,7 @@ export default function HorizontalMovilMenu({open, setOpen}) {
                     <div className="px-4 py-5 sm:px-0 sm:py-0">
                       <dl className="space-y-8 sm:divide-y sm:divide-gray-200 sm:space-y-0">
                         <div className="sm:flex sm:px-6 sm:py-5">
-                          <dt className="text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0 lg:w-48">Bio</dt>
+                          <dt className="text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0 lg:w-48">Main goal of the area</dt>
                           <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:ml-6 sm:col-span-2">
                             <p>
                               Enim feugiat ut ipsum, neque ut. Tristique mi id elementum praesent. Gravida in tempus
@@ -147,25 +150,9 @@ export default function HorizontalMovilMenu({open, setOpen}) {
                           </dd>
                         </div>
                         <div className="sm:flex sm:px-6 sm:py-5">
-                          <dt className="text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0 lg:w-48">
-                            Location
-                          </dt>
+                          <dt className="text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0 lg:w-48">Team</dt>
                           <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:ml-6 sm:col-span-2">
-                            New York, NY, USA
-                          </dd>
-                        </div>
-                        <div className="sm:flex sm:px-6 sm:py-5">
-                          <dt className="text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0 lg:w-48">
-                            Website
-                          </dt>
-                          <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:ml-6 sm:col-span-2">ashleyporter.com</dd>
-                        </div>
-                        <div className="sm:flex sm:px-6 sm:py-5">
-                          <dt className="text-sm font-medium text-gray-500 sm:w-40 sm:flex-shrink-0 lg:w-48">
-                            Birthday
-                          </dt>
-                          <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:ml-6 sm:col-span-2">
-                            <time dateTime="1982-06-23">June 23, 1982</time>
+                            <UserCards />
                           </dd>
                         </div>
                       </dl>

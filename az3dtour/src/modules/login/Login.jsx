@@ -50,6 +50,7 @@ const Login = () => {
             }
         },
     });
+    
     useEffect(() => {
         document.title = "AstraZeneca";
     }, []);

@@ -1,18 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Modal from '../components/modal';
+import Modal from './modal';
 import dataScene from '../helpers/dataScene';
 import { UseModal } from '../hooks/useModal';
 import ModelContainer from './modelContainer';
 import { Pannellum } from 'pannellum-react';
 import '../styles/scena.css';
-export default function Scene() {
+export default function SceneMobil() {
     const { isOpen, openModal, closeModal } = UseModal(false);
     const [scene, setScene] = useState(dataScene['insideOne']);
     const [model, setModel] = useState(null);
     
 
     const mountRef = useRef(null);
-
 
 
     useEffect(() => {
@@ -33,12 +32,12 @@ export default function Scene() {
                 title={scene.title}
                 image={scene.image}
                 pitch={scene.pitch}
-                maxPitch={50}
+                maxPitch={40}
                 minPitch={-50}
                 yaw={scene.yaw}
                 maxHfov={50}
                 minHfov={150}
-                hfov={80}
+                hfov={40}
                 haov={360}
                 vaov={100}
                 autoLoad
