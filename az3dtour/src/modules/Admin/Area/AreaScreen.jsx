@@ -6,6 +6,7 @@ import FeatherIcon from "feather-icons-react/build/FeatherIcon";
 import { Badge, Button, Card, Col, Row } from "react-bootstrap";
 import AreaForm from './components/AreaForm';
 import EditAreaForm from './components/EditAreaForm';
+import SubTeamForm from './components/SubTeamForm';
 const AreaScreen = () => {
     const user = useContext(AuthContext);
     const { token } = user;
@@ -13,7 +14,10 @@ const AreaScreen = () => {
     const [areas, setAreas] = useState([]);
     const [isOpen, setIsOpen] = useState(false);
     const [isOpenEdit, setIsOpenEdit] = useState(false);
+    const [isOpenSubTeam, setIsOpenSubTeam] = useState(false);
     const [object, setObject] = useState({});
+    const [area, setArea] = useState([]);
+    const [subteams, setSubTeams] = useState([]);
 
 
     const getAreas = async () => {
@@ -29,6 +33,20 @@ const AreaScreen = () => {
             console.log(error);
         }
     }
+
+    const getSubByid = async (id) => {
+        try {
+            const response = await AxiosClient({
+                url: `/area/getSubById/${id}`,
+                method: "GET",
+            });
+            console.log(response.data)
+            setSubTeams(response.data);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
     useEffect(() => {
         getAreas();
     }, []);
@@ -85,7 +103,12 @@ const AreaScreen = () => {
             },
             {
                 name: "sub_teams",
-                cell:(row) => <div><Button variant='none'><FeatherIcon icon={"eye"}/></Button></div>,
+                cell:(row) => <div><Button variant='none' 
+                onClick={() => {
+                    setIsOpenSubTeam(true)
+                    setArea(row)
+                    getSubByid(row.id)
+                }}><FeatherIcon icon={"eye"}/></Button></div>,
                 sortable: true,
                 fixed: true,
             },
@@ -123,6 +146,7 @@ const AreaScreen = () => {
             </Col>
             <AreaForm  isOpen={isOpen} data={getAreas} onClose={()=> setIsOpen(false)}/>
             <EditAreaForm isOpen={isOpenEdit} data={getAreas} object={object} onClose={()=> setIsOpenEdit(false)}/>
+            <SubTeamForm isOpen={isOpenSubTeam} onClose={()=> setIsOpenSubTeam(false)} idArea={area.id} subs={subteams}/>
         </Row>
     );
 }
