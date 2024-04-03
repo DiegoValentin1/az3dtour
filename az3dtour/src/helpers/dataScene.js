@@ -1,7 +1,7 @@
 const Scenes = {
     insideOne: {
         title: 'HACKATHON 1',
-        image: '../images/1-panoramica.jpeg',
+        image: '../images/1-panoramica_4060px.jpeg',
         pitch: -11,
         yaw: 50,
         hotSpots: [
@@ -31,7 +31,7 @@ const Scenes = {
     },
     insideTwo: {
         title: 'HACKATHON 2',
-        image: "../images/2-panoramica.jpeg",
+        image: "../images/2-panoramica_4060px.jpeg",
         pitch: -11,
         yaw: 50,
         hotSpots: [
@@ -55,7 +55,7 @@ const Scenes = {
     },
     insideTree: {
         title: 'HACKATHON 3',
-        image: "../images/3-panoramica.jpeg",
+        image: "../images/3-panoramica_4060px.jpeg",
         pitch: -11,
         yaw: 50,
         hotSpots: [
