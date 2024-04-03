@@ -1,7 +1,7 @@
 import instance from 'axios';
 
 const AxiosClient = instance.create({
-    baseURL: 'http://192.168.100.20:8080/api-az'
+    baseURL: 'http://192.168.100.77:8080/api-az'
 });
 
 const requestHandler = (request) => {

@@ -41,6 +41,7 @@ const AppRouter = () => {
               <>
                   <Routes>
                     <Route path="auth" element={<Login/>} />
+                    <Route path="/home" element={<UserHome/>}/>
                     <Route index element={<>Main</>} />
                     <Route path="/tour" element={<TourScreen/>} />
                     <Route path="*" element={<E404/>} />
