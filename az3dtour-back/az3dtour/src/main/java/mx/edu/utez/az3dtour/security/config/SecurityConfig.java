@@ -29,6 +29,7 @@ public class SecurityConfig {
             "/api-az/user/**",
             "/api-az/role/**",
             "/api-az/auth/**",
+            "/api-az/area/**",
     };
 
     @Bean
