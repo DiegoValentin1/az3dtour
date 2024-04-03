@@ -42,6 +42,7 @@ const Login = () => {
                         payload: { data: response.data },
                     };
                     dispatch(action);
+                    navigation("/");
                     handleLogin(true);
                 }
             } catch (err) {
