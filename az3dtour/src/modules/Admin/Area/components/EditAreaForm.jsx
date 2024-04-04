@@ -43,7 +43,7 @@ const EditAreaForm = ({ isOpen, data, onClose, object }) => {
         form.values.main_lead_name = main_lead_name;
         form.values.name_of_the_area = name_of_the_area;
         form.values.web_link_area = web_link_area;
-    },[object]);
+    },[object, isOpen]);
     return (
         <Modal show={isOpen} onHide={onClose} backdrop="static">
             <Modal.Title className='m-2'>Update area</Modal.Title>

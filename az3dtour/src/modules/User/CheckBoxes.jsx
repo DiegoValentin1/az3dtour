@@ -13,10 +13,10 @@ const iconArea = <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fil
 
 export default function CheckBoxes({ setTeam, setArea, setPersona }) {
     return (
-        <fieldset className="flex flex-row px-5 items-center">
+        <fieldset className="flex flex-row px-2 items-center place-items-center">
             <legend className="sr-only">Notifications</legend>
-            <div className="relative flex items-start w-[25%]">
-                <div className="flex items-center h-5">
+            <div className="relative flex items-center w-[25%]">
+                <div className="flex items-center">
                     <input
                         id="comments"
                         aria-describedby="comments-description"
@@ -26,17 +26,17 @@ export default function CheckBoxes({ setTeam, setArea, setPersona }) {
                         className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
                     />
                 </div>
-                <div className="ml-1 text-sm">
+                <div className="ml-1 text-sm flex items-center">
                     <label htmlFor="comments" className="hidden font-medium text-gray-700 lg:block">
-                        Áreas
+                        Areas
                     </label>
                     <div className="block lg:hidden sm:block" >{iconArea}</div>
                     <p id="comments-description" className="text-gray-500">
                     </p>
                 </div>
             </div>
-            <div className="relative flex items-start w-[25%] mx-2 sm:mx-2 md:mx-5 lg:mx-8">
-                <div className="flex items-center h-5">
+            <div className="relative flex items-center w-[25%] mx-3 sm:mx-3 md:mx-3 lg:mx-10">
+                <div className="flex items-center">
                     <input
                         id="candidates"
                         aria-describedby="candidates-description"
@@ -46,17 +46,17 @@ export default function CheckBoxes({ setTeam, setArea, setPersona }) {
                         className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
                     />
                 </div>
-                <div className="ml-1 text-sm">
+                <div className="ml-1 text-sm flex items-center">
                     <label htmlFor="candidates" className="hidden font-medium text-gray-700 lg:block">
-                        Equipos
+                        Teams
                     </label>
                     <div className="block lg:hidden sm:block" >{iconTeam}</div>
                     <p id="candidates-description" className="text-gray-500">
                     </p>
                 </div>
             </div>
-            <div className="relative flex items-start w-[25%]">
-                <div className="flex items-center h-5">
+            <div className="relative flex items-center w-[25%]">
+                <div className="flex items-center">
                     <input
                         id="offers"
                         aria-describedby="offers-description"
@@ -66,9 +66,9 @@ export default function CheckBoxes({ setTeam, setArea, setPersona }) {
                         className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
                     />
                 </div>
-                <div className="ml-1 text-sm">
+                <div className="ml-1 text-sm flex items-center">
                     <label htmlFor="offers" className="hidden font-medium text-gray-700 lg:block">
-                        Personas
+                        People
                     </label>
                     <div className="block lg:hidden sm:block" >{iconPersona}</div>
                     <p id="offers-description" className="text-gray-500">

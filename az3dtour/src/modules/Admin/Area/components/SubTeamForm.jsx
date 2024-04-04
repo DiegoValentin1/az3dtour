@@ -65,7 +65,7 @@ const SubTeamForm = ({ isOpen, onClose, idArea, subs}) => {
             <Modal.Title className='m-2'>Create scenes</Modal.Title>
             <Modal.Body>
                 <Form onSubmit={form.handleSubmit}>
-                    {subTeams.map((subTeam, index) => (
+                    {subTeams && subTeams.map((subTeam, index) => (
                         <div key={index}>
                             <Form.Group className="mb-3">
                                 <Form.Label htmlFor={`sub_team_${index}`}>Sub team</Form.Label>
