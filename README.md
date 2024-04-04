@@ -18,7 +18,6 @@ Una serie de ejemplos paso a paso que te indican cómo ejecutar un entorno de de
 
 Backend
 Clona el repositorio en tu máquina local.
-git clone https://github.com/your-username/your-project-name.git
 Navega al directorio del backend.
 cd your-project-name/backend
 Instala las dependencias de Maven.
