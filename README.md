@@ -1,4 +1,5 @@
-Nombre del Proyecto
+Nombre del proyecto: az3dtour
+
 Breve descripción del proyecto: Este es un proyecto full-stack que integra Spring Boot en el backend con JWT para la autenticación, MongoDB como base de datos, y en el frontend utiliza React con la librería Tailwind CSS para el diseño y Panellum para la visualización de imágenes panorámicas.
 
 Comenzando
